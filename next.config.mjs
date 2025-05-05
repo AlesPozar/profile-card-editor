@@ -7,19 +7,6 @@ const nextConfig = {
   basePath: process.env.NODE_ENV === 'production' ? '/profile-card-editor' : '',
 };
 
-export default nextConfig;
+module.exports = nextConfig
 
-///** @type {import('next').NextConfig} */
-/*const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
-}
-//
-export default nextConfig*/
+export default nextConfig;
