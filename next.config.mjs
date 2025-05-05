@@ -24,5 +24,5 @@ export default nextConfig;
     unoptimized: true,
   },
 }
-
+//
 export default nextConfig*/
