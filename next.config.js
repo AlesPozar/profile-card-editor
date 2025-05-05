@@ -1,12 +1,9 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/profile-card-editor' : '',
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
-  },
+  output: "export",  // <=== enables static exports
+  reactStrictMode: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
