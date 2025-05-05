@@ -94,7 +94,7 @@ export function ProfileCard({ profileData, designSettings }: ProfileCardProps) {
           style={{ width: avatarSize, height: avatarSize }}
         >
           <Image
-            src={profileData.avatar || "/placeholder.svg"}
+            src={profileData.avatar || "./placeholder.svg"}
             alt="Profile"
             width={400}
             height={400}

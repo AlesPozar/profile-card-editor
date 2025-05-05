@@ -46,7 +46,7 @@ const defaultProfileData: ProfileData = {
   name: "Janez Novak",
   title: "Najboljši svetovalec pri nakupu!",
   company: "podjetje d.o.o.",
-  avatar: "/placeholder.svg?height=400&width=400",
+  avatar: "./placeholder.svg?height=400&width=400",
   availability: true,
   buttons: [
     {
