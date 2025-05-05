@@ -145,19 +145,8 @@ export default function ProfileCardEditor() {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="border-b">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="px-4 h-16 flex items-center justify-center">
           <h1 className="text-2xl font-bold">Shadcn Profile Card Editor</h1>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" size="sm" onClick={handleShare}>
-              <Share2 className="mr-2 h-4 w-4" />
-              Share
-            </Button>
-            <Button size="sm" onClick={handleExport}>
-              <Download className="mr-2 h-4 w-4" />
-              Export
-            </Button>
-            <ModeToggle />
-          </div>
         </div>
       </header>
 

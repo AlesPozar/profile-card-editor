@@ -62,7 +62,7 @@ export function ProfileCard({ profileData, designSettings }: ProfileCardProps) {
       }}
     >
       <CardHeader className="relative p-4 pb-0">
-        <div className="flex justify-between items-center">
+        <div className=" h-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             {showAvailability && (
               <>
@@ -76,7 +76,16 @@ export function ProfileCard({ profileData, designSettings }: ProfileCardProps) {
               </>
             )}
           </div>
-          {showThemeToggle && <ModeToggle />}
+          {showThemeToggle && <button
+            onClick={() => {
+              navigator.clipboard.writeText(window.location.href)
+              alert("Link copied to clipboard!") // Replace with toast if needed
+            }}
+            className="p-2 rounded-full hover:bg-gray-200 focus:outline-none"
+            aria-label="Share"
+          >
+            <LinkIcon className="h-5 w-5" />
+          </button>}
         </div>
       </CardHeader>
       <CardContent className="flex flex-col items-center pt-6 pb-2 overflow-auto">

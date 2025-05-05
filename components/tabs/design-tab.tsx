@@ -77,7 +77,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
       </div>
 
       <div className="flex items-center justify-between">
-        <Label htmlFor="show-theme-toggle">Show Theme Toggle</Label>
+        <Label htmlFor="show-theme-toggle">Show Share Toggle</Label>
         <Switch
           id="show-theme-toggle"
           checked={designSettings.showThemeToggle}
