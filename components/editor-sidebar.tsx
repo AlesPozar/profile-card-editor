@@ -28,14 +28,14 @@ export function EditorSidebar({
 }: EditorSidebarProps) {
   return (
     <div
-      className={`border-r bg-background transition-all duration-300 ${
+      className={`border-r bg-background transition-all duration-300${
         open ? "w-80" : "w-0"
-      } relative flex flex-col h-[calc(100vh-64px)]`}
+      } fixed top-16 bottom-0 left-0 flex flex-col z-40 h-[calc(100vh-64px)]`}
     >
       <Button
         variant="ghost"
         size="icon"
-        className="absolute -right-10 top-4 bg-background border shadow-sm"
+        className="absolute -right-10 top-4 bg-background border shadow-sm z-50"
         onClick={() => setOpen(!open)}
       >
         {open ? <ChevronLeft className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
@@ -43,12 +43,12 @@ export function EditorSidebar({
 
       {open && (
         <div className="p-4 flex-1 overflow-auto flex flex-col">
-          <h2 className="text-lg font-semibold mb-4">Customize Profile Card</h2>
+          <h2 className="text-lg font-semibold mb-4">Uredi profil</h2>
           <Tabs defaultValue="profile" className="flex-1 flex flex-col">
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="profile">Profile</TabsTrigger>
-              <TabsTrigger value="buttons">Buttons</TabsTrigger>
-              <TabsTrigger value="design">Design</TabsTrigger>
+              <TabsTrigger value="profile">Profil</TabsTrigger>
+              <TabsTrigger value="buttons">Gumbi</TabsTrigger>
+              <TabsTrigger value="design">Ostalo</TabsTrigger>
             </TabsList>
             <TabsContent value="profile" className="flex-1 mt-0 border-0 p-0 data-[state=active]:block">
               <ProfileTab profileData={profileData} setProfileData={setProfileData} />

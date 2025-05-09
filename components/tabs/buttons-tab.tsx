@@ -70,7 +70,7 @@ export function ButtonsTab({ profileData, setProfileData }: ButtonsTabProps) {
     <div className="space-y-4 py-4">
       <Button onClick={addNewButton} className="w-full" variant="outline">
         <PlusCircle className="mr-2 h-4 w-4" />
-        Add New Button
+        Dodaj Nov Gumb
       </Button>
 
       <DragDropContext onDragEnd={handleDragEnd}>
@@ -90,7 +90,7 @@ export function ButtonsTab({ profileData, setProfileData }: ButtonsTabProps) {
                           <div {...provided.dragHandleProps} className="mr-2 cursor-grab">
                             <GripVertical className="h-4 w-4 text-muted-foreground" />
                           </div>
-                          <Label className="font-medium">Button {index + 1}</Label>
+                          <Label className="font-medium">Gumb {index + 1}</Label>
                         </div>
                         <div className="flex items-center gap-2">
                           <Switch
@@ -111,7 +111,7 @@ export function ButtonsTab({ profileData, setProfileData }: ButtonsTabProps) {
                       <div className="space-y-2 mt-2">
                         <div className="space-y-1">
                           <Label htmlFor={`label-${button.id}`} className="text-xs">
-                            Label
+                            Besedilo
                           </Label>
                           <Input
                             id={`label-${button.id}`}
@@ -123,7 +123,7 @@ export function ButtonsTab({ profileData, setProfileData }: ButtonsTabProps) {
 
                         <div className="space-y-1">
                           <Label htmlFor={`link-${button.id}`} className="text-xs">
-                            Link
+                            Povezava
                           </Label>
                           <Input
                             id={`link-${button.id}`}
@@ -135,7 +135,7 @@ export function ButtonsTab({ profileData, setProfileData }: ButtonsTabProps) {
 
                         <div className="space-y-1">
                           <Label htmlFor={`icon-${button.id}`} className="text-xs">
-                            Icon
+                            Ikona
                           </Label>
                           <Select value={button.icon} onValueChange={(value) => updateButton(button.id, "icon", value)}>
                             <SelectTrigger className="h-8">
@@ -157,7 +157,7 @@ export function ButtonsTab({ profileData, setProfileData }: ButtonsTabProps) {
 
                         <div className="space-y-1">
                           <Label htmlFor={`text-color-${button.id}`} className="text-xs">
-                            Text Color
+                            Barva Besedila
                           </Label>
                           <ColorPicker
                             color={button.textColor || "#3b82f6"}
@@ -167,7 +167,7 @@ export function ButtonsTab({ profileData, setProfileData }: ButtonsTabProps) {
 
                         <div className="space-y-1">
                           <Label htmlFor={`border-color-${button.id}`} className="text-xs">
-                            Border Color
+                            Barva Robu
                           </Label>
                           <ColorPicker
                             color={button.borderColor || "#3b82f6"}
@@ -177,7 +177,7 @@ export function ButtonsTab({ profileData, setProfileData }: ButtonsTabProps) {
 
                         <div className="space-y-1">
                           <Label htmlFor={`background-color-${button.id}`} className="text-xs">
-                            Background Color
+                            Barva Ozadja
                           </Label>
                           <ColorPicker
                             color={button.backgroundColor || "transparent"}

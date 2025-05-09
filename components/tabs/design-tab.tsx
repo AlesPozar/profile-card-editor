@@ -18,7 +18,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
   return (
     <div className="space-y-4 py-4">
       <div className="space-y-2">
-        <Label>Card Background Color</Label>
+        <Label>Barva Ozadja Strani</Label>
         <ColorPicker
           color={designSettings.cardBackgroundColor}
           onChange={(color) => setDesignSettings({ ...designSettings, cardBackgroundColor: color })}
@@ -26,7 +26,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
       </div>
 
       <div className="space-y-2">
-        <Label>Available Indicator Color</Label>
+        <Label>Barva Ko Je Dostopen</Label>
         <ColorPicker
           color={designSettings.availabilityColor}
           onChange={(color) => setDesignSettings({ ...designSettings, availabilityColor: color })}
@@ -34,7 +34,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
       </div>
 
       <div className="space-y-2">
-        <Label>Not Available Indicator Color</Label>
+        <Label>Barva Ko Ni Dostopen</Label>
         <ColorPicker
           color={designSettings.unavailabilityColor}
           onChange={(color) => setDesignSettings({ ...designSettings, unavailabilityColor: color })}
@@ -45,7 +45,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
 
       <div className="space-y-2">
         <div className="flex justify-between">
-          <Label>Avatar Size: {designSettings.avatarSize}px</Label>
+          <Label>Velikost Slike: {designSettings.avatarSize}px</Label>
         </div>
         <Slider
           value={[designSettings.avatarSize]}
@@ -59,7 +59,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
       <Separator />
 
       <div className="flex items-center justify-between">
-        <Label htmlFor="rounded-buttons">Rounded Buttons</Label>
+        <Label htmlFor="rounded-buttons">Zaobljeni gumbi</Label>
         <Switch
           id="rounded-buttons"
           checked={designSettings.roundedButtons}
@@ -68,7 +68,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
       </div>
 
       <div className="flex items-center justify-between">
-        <Label htmlFor="show-availability">Show Availability</Label>
+        <Label htmlFor="show-availability">Pokaži Dostopnost</Label>
         <Switch
           id="show-availability"
           checked={designSettings.showAvailability}
@@ -77,7 +77,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
       </div>
 
       <div className="flex items-center justify-between">
-        <Label htmlFor="show-theme-toggle">Show Share Toggle</Label>
+        <Label htmlFor="show-theme-toggle">Pokaži Opcijo Za Deljenje</Label>
         <Switch
           id="show-theme-toggle"
           checked={designSettings.showThemeToggle}
@@ -86,7 +86,7 @@ export function DesignTab({ designSettings, setDesignSettings }: DesignTabProps)
       </div>
 
       <div className="flex items-center justify-between">
-        <Label htmlFor="show-socials">Show Social Icons</Label>
+        <Label htmlFor="show-socials">Pokaži Ikone Socialnih Omrežij</Label>
         <Switch
           id="show-socials"
           checked={designSettings.showSocials}

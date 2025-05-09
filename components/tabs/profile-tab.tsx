@@ -17,7 +17,7 @@ export function ProfileTab({ profileData, setProfileData }: ProfileTabProps) {
   return (
     <div className="space-y-4 py-4">
       <div className="space-y-2">
-        <Label htmlFor="name">Name</Label>
+        <Label htmlFor="name">Ime/Naslov</Label>
         <Input
           id="name"
           value={profileData.name}
@@ -26,7 +26,7 @@ export function ProfileTab({ profileData, setProfileData }: ProfileTabProps) {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="title">Title/Description</Label>
+        <Label htmlFor="title">Opis</Label>
         <Input
           id="title"
           value={profileData.title}
@@ -35,7 +35,7 @@ export function ProfileTab({ profileData, setProfileData }: ProfileTabProps) {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="company">Company</Label>
+        <Label htmlFor="company">Podjetje</Label>
         <Input
           id="company"
           value={profileData.company}
@@ -44,7 +44,7 @@ export function ProfileTab({ profileData, setProfileData }: ProfileTabProps) {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="avatar">Avatar URL</Label>
+        <Label htmlFor="avatar">Slika URL</Label>
         <Input
           id="avatar"
           value={profileData.avatar}
@@ -55,7 +55,7 @@ export function ProfileTab({ profileData, setProfileData }: ProfileTabProps) {
       <Separator />
 
       <div className="flex items-center justify-between">
-        <Label htmlFor="availability">Available</Label>
+        <Label htmlFor="availability">Dostopnost</Label>
         <Switch
           id="availability"
           checked={profileData.availability}
@@ -66,7 +66,7 @@ export function ProfileTab({ profileData, setProfileData }: ProfileTabProps) {
       <Separator />
 
       <div className="space-y-2">
-        <Label>Social Media</Label>
+        <Label>Socialna Omrežja</Label>
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <Label htmlFor="instagram">Instagram</Label>

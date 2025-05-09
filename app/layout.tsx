@@ -14,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light" style={{ colorScheme: "light" }}>
-      <body>{children}</body>
+      <body
+        className="bg-white text-black dark:bg-gray-900 dark:text-white"
+        style={{ colorScheme: "light dark" }}
+      >{children}</body>
     </html>
   )
 }

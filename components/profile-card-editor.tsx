@@ -122,36 +122,18 @@ export default function ProfileCardEditor() {
   const [profileData, setProfileData] = useState<ProfileData>(defaultProfileData)
   const [designSettings, setDesignSettings] = useState<DesignSettings>(defaultDesignSettings)
   const [sidebarOpen, setSidebarOpen] = useState(true)
-  const { toast } = useToast()
-
-  const handleExport = () => {
-    // In a real app, this would generate an image or save the configuration
-    toast({
-      title: "Card exported!",
-      description: "Your profile card has been exported successfully.",
-    })
-  }
-
-  const handleShare = () => {
-    // In a real app, this would generate a shareable link
-    navigator.clipboard.writeText(window.location.href)
-    toast({
-      title: "Link copied!",
-      description: "Shareable link has been copied to clipboard.",
-    })
-  }
-
+  
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
-      <header className="border-b">
+      <header className="border-b fixed top-0 left-0 right-0 bg-background z-50">
         <div className="px-4 h-16 flex items-center justify-center">
-          <h1 className="text-2xl font-bold">Shadcn Profile Card Editor</h1>
+          <h1 className="text-2xl font-bold">Shadcn Urejevalnik Profila Prototip</h1>
         </div>
       </header>
 
       {/* Main Content */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden pt-16">
         {/* Sidebar */}
         <EditorSidebar
           profileData={profileData}
@@ -163,8 +145,12 @@ export default function ProfileCardEditor() {
         />
 
         {/* Preview Area */}
-        <div className="flex-1 overflow-auto bg-muted/40 p-4 flex items-center justify-center">
-          <div className="max-w-md w-full flex justify-center">
+        <div
+          className={`flex-1 overflow-auto bg-muted/40 p-4 flex items-center justify-center z-0 ${
+            sidebarOpen ? "ml-80" : "ml-0"
+          } transition-all duration-300`}
+        >
+          <div className="max-w-md w-full">
             <ProfileCard profileData={profileData} designSettings={designSettings} />
           </div>
         </div>
